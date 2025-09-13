@@ -261,3 +261,18 @@ a{
 .top-btn:hover {
     opacity: 0.8;
 }
+
+footer {
+    width: 100%;
+    background-color: var(--footer-bg-color);
+    color: var(--text-color);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
