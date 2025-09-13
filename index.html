@@ -3,424 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>프렌차이즈 카페 한눈에 살펴보기</title>
-    <link rel="stylesheet" href="CSS/index.css">
+    <title>오늘 뭐 마시지? - 소개</title>
+    <link rel="stylesheet" href="CSS/index.css"> <!-- 이 페이지 전용 스타일 -->
 </head>
 <body>
     <div id="wrapper">
-        <div id="header" >
-            <img src="img/logo.PNG" alt="KH로고">
+        <header id="header">
+            <a href="index.html"><img src="img/logo.PNG" alt="KH로고"></a>
             <div class="header-right">
-                <div id="location">
-                    <a href="./html/about.html"><input type="button" value="매장 위치"></a>
-                </div>
-                <div id="login">
-                    <a href="./html/login.html"><input type="button" value="로그인"></a>
-                </div>
-                <div class="search">
-                    <input type="text" placeholder="검색어를 입력하세요.">
-                    <input type="button" value="검색">
-                </div>
+                <a href="html/login.html" class="btn">로그인</a>
             </div>
-        </div>
+        </header>
 
-        <div id="nav">
+        <div class="nav">
             <ul>
-                <li class="cafe">
-                    <a href="#starbucks-slide" data-slide="slide1">스타벅스</a>
-                    <ul>
-                        <li><a href="#sb-drink">음료</a></li>
-                        <li><a href="#sb-food">푸드</a></li>
-                    </ul>
+                <li>
+                    <a href="index.html">소개</a>
                 </li>
-                <li class="cafe">
-                    <a href="#mega-slide" data-slide="slide2">메가커피</a>
-                    <ul>
-                        <li><a href="#mega-drink">음료</a></li>
-                        <li><a href="#mega-food">푸드</a></li>
-                    </ul>
-                </li>
-                <li class="cafe">
-                    <a href="#ediya-slide" data-slide="slide3">이디야</a>
-                    <ul>
-                        <li><a href="#ediya-drink">음료</a></li>
-                        <li><a href="#ediya-food">푸드</a></li>
-                    </ul>
-                </li>
-                <li class="cafe">
-                    <a href="#compose-slide" data-slide="slide4">컴포즈</a>
-                    <ul>
-                        <li><a href="#compose-drink">음료</a></li>
-                        <li><a href="#compose-food">푸드</a></li>
-                    </ul>
-                </li>
-                <li class="cafe">
-                    <a href="#hasamdong-slide" data-slide="slide5">하삼동커피</a>
-                    <ul>
-                        <li><a href="#hasamdong-drink">음료</a></li>
-                        <li><a href="#hasamdong-food">푸드</a></li>
-                    </ul>
+                <li class="dropdown">
+                    <a href="./html/menu.html">프랜차이즈 메뉴</a>
                 </li>
             </ul>
         </div>
 
-        <div class="slider-container">
-            <input type="radio" name="slide" id="slide1" checked>
-            <input type="radio" name="slide" id="slide2">
-            <input type="radio" name="slide" id="slide3">
-            <input type="radio" name="slide" id="slide4">
-            <input type="radio" name="slide" id="slide5">
-
-            <div class="slides">
-                <div class="slide" id="starbucks-slide">
-                    <div class="menu-section">
-                        <!-- 스타벅스 메뉴 -->
-                        <h2 id="sb-drink">스타벅스 음료 메뉴</h2>
-                        <table>
-                            <tr>
-                                <td><img src="img/sb음료/sb_aa.jpg" alt=""></td>
-                                <td><img src="img/sb음료/sb_lathe.jpg" alt=""></td>
-                                <td><img src="img/sb음료/sb_makiato.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>아이스 아메리카노</td>
-                                <td>아이스 카페 라떼</td>
-                                <td>아이스 카라멜 마끼아또</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/sb음료/sb_moka.jpg" alt=""></td>
-                                <td><img src="img/sb음료/sb_capuchino.jpg" alt=""></td>
-                                <td><img src="img/sb음료/sb_dolche.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>아이스 카페 모카</td>
-                                <td>아이스 카푸치노</td>
-                                <td>아이스 스타벅스 돌체 라떼</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/sb음료/sb_mkcmlathe.jpg" alt=""></td>
-                                <td><img src="img/sb음료/sb_vanilabeen.jpg" alt=""></td>
-                                <td><img src="img/sb음료/sb_lavendercafe.png" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>아이스 밀크카라멜 라떼</td>
-                                <td>아이스 바닐라 빈 라떼</td>
-                                <td>아이스 라벤더 카페 브레베</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="menu-section">
-                        <h2 id="sb-food">스타벅스 푸드 메뉴</h2>
-                        <table>
-                            <tr>
-                                <td><img src="img/sb푸드/sb_tangjongplain.jpg" alt=""></td>
-                                <td><img src="img/sb푸드/sb_tangjongPamsan.jpg" alt=""></td>
-                                <td><img src="img/sb푸드/sb_tangjongBule.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>탕종 플레인 베이글</td>
-                                <td>탕종 파마산 베이글</td>
-                                <td>탕종 블루베리 베이글</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/sb푸드/sb_ganashucake.jpg" alt=""></td>
-                                <td><img src="img/sb푸드/sb_tirameshu.jpg" alt=""></td>
-                                <td><img src="img/sb푸드/sb_melon.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>세븐 레이어 가나슈 케이크</td>
-                                <td>마스카포네 티라미수</td>
-                                <td>멜론쿠헨</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <!-- 메가 커피 메뉴 -->
-                <div class="slide" id="mega-slide">
-                    <div class="menu-section">
-                        <h2 id="mega-drink">메가커피 메뉴</h2>
-                        <table>
-                            <tr>
-                                <td><img src="img/mg음료/mg_아메리카노.jpg" alt=""></td>
-                                <td><img src="img/mg음료/mg_큐브라떼.jpg" alt=""></td>
-                                <td><img src="img/mg음료/mg_초코젤라또말차라떼.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>아이스 아메리카노</td>
-                                <td>아이스 큐브라떼</td>
-                                <td>아이스 초코 젤라또 말차라떼</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/mg음료/mg_초코허니퐁크러쉬.jpg" alt=""></td>
-                                <td><img src="img/mg음료/mg_쿠키프라페.jpg" alt=""></td>
-                                <td><img src="img/mg음료/mg_복숭아아이스티.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>아이스 초코 허니퐁 크러쉬</td>
-                                <td>아이스 쿠키 프라페</td>
-                                <td>아이스 복숭아 아이스티</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/mg음료/mg_메가에이드.jpg" alt=""></td>
-                                <td><img src="img/mg음료/mg_사과유자차.jpg" alt=""></td>
-                                <td><img src="img/mg음료/mg_캐모마일.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>아이스 메가에이드</td>
-                                <td>아이스 사과유자차</td>
-                                <td>아이스 캐모마일</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <!-- 메가 커피 푸드 -->
-                    <div class="menu-section">
-                        <h2 id="mega-food">메가커피 푸드</h2>
-                        <table>
-                            <tr>
-                                <td><img src="img/mg푸드/mg_치즈품은감자빵.jpg" alt=""></td>
-                                <td><img src="img/mg푸드/mg_치즈케익.jpg" alt=""></td>
-                                <td><img src="img/mg푸드/mg_초코젤라또크로플.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>치즈품은 감자빵</td>
-                                <td>치즈 케익</td>
-                                <td>초코 젤라또 크로플</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/mg푸드/mg_초코스모어쿠키.jpg" alt=""></td>
-                                <td><img src="img/mg푸드/mg_유니콘프라페마카롱.jpg" alt=""></td>
-                                <td><img src="img/mg푸드/mg_메가초코마카롱.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>초코 스모어 쿠키</td>
-                                <td>유니콘 프라페 마카롱</td>
-                                <td>메가 초코 마카롱</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="slide" id="ediya-slide">
-                    <div class="menu-section">
-                    <h2 id="ediya-drink">이디야 메뉴</h2>
-                        <table>
-                            <tr>
-                                <td><img src="img/ediya음료/콜드블루아메리카노.png" alt=""></td>
-                                <td><img src="img/ediya음료/콜드블루라떼.png" alt=""></td>
-                                <td><img src="img/ediya음료/콜드브루니트로.png" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>콜드브루 아메리카노</td>
-                                <td>콜드브루 라떼</td>
-                                <td>콜드브루 니트로</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/ediya음료/콜드브루화이트비엔나.png" alt=""></td>
-                                <td><img src="img/ediya음료/카푸치노.png" alt=""></td>
-                                <td><img src="img/ediya음료/카페모카.png" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>콜드브루 화이트 비엔나</td>
-                                <td>카푸치노</td>
-                                <td>카페모카</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/ediya음료/달달커피.png" alt=""></td>
-                                <td><img src="img/ediya음료/바닐라라떼.png" alt=""></td>
-                                <td><img src="img/ediya음료/연유콜드브루.png" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>달달커피</td>
-                                <td>바닐라라떼</td>
-                                <td>연유 콜드브루</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="menu-section">
-                        <h2 id="ediya-food">이디야 푸드</h2>
-                        <table>
-                            <tr>
-                                <td><img src="img/ediya푸드/망고초코쉘케이크.png" alt=""></td>
-                                <td><img src="img/ediya푸드/베리초코쉘케이크.png" alt=""></td>
-                                <td><img src="img/ediya푸드/피치초코쉘케이크.png" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>망고 초코쉘 케이크</td>
-                                <td>베리 초코쉘 케이크</td>
-                                <td>피치 초코쉘 케이크</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/ediya푸드/수플레치즈케이크.png" alt=""></td>
-                                <td><img src="img/ediya푸드/초코티라미수케이크.png" alt=""></td>
-                                <td><img src="img/ediya푸드/허니카라멜브레드.png" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>수플레 치즈 케이크</td>
-                                <td>초코 티라미수 케이크</td>
-                                <td>허니 카라멜 브레드</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="slide" id="compose-slide">
-                    <div class="menu-section">
-                        <h2 id="compose-drink">컴포즈 메뉴</h2>
-                        <table>
-                            <tr>
-                                <td><img src="img/comp음료/아아.jpg" alt=""></td>
-                                <td><img src="img/comp음료/카페라떼.jpg" alt=""></td>
-                                <td><img src="img/comp음료/아인슈페너라떼.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>아이스 아메리카노</td>
-                                <td>카페라떼</td>
-                                <td>아인슈페너라떼</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/comp음료/돌체라떼.jpg" alt=""></td>
-                                <td><img src="img/comp음료/바닐라라떼.jpg" alt=""></td>
-                                <td><img src="img/comp음료/달고나라떼.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>돌체라떼</td>
-                                <td>바닐라라떼</td>
-                                <td>달고나라떼</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/comp음료/카라멜마끼아또.jpg" alt=""></td>
-                                <td><img src="img/comp음료/카페모카.jpg" alt=""></td>
-                                <td><img src="img/comp음료/흑당카페라떼.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>카라멜 마끼아또</td>
-                                <td>카페모카</td>
-                                <td>흑당카페라떼</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="menu-section">
-                        <h2 id="compose-food">컴포즈 푸드</h2>
-                        <table>
-                            <tr>
-                                <td><img src="img/comp푸드/햄치즈샌드위치.jpg" alt=""></td>
-                                <td><img src="img/comp푸드/크로플.jpg" alt=""></td>
-                                <td><img src="img/comp푸드/허니버터브레드.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>햄 치즈 샌드위치</td>
-                                <td>크로플</td>
-                                <td>허니버터브레드</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/comp푸드/블랙벨벳케이크.jpg" alt=""></td>
-                                <td><img src="img/comp푸드/시나몬카라멜와플.jpg" alt=""></td>
-                                <td><img src="img/comp푸드/오레오생크림와플.jpg" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>블랙벨벳 케이크</td>
-                                <td>시나몬 카라멜 와플</td>
-                                <td>오레오 생크림 와플</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-                <div class="slide" id="hasamdong-slide">
-                    <div class="menu-section">
-                        <h2 id="hasamdong-drink">하삼동커피 메뉴</h2>
-                            <table>
-                            <tr>
-                                <td><img src="img/하삼동음료/아아.png" alt=""></td>
-                                <td><img src="img/하삼동음료/카페라떼.png" alt=""></td>
-                                <td><img src="img/하삼동음료/바닐라라떼.png" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>아이스 아메리카노</td>
-                                <td>카페라떼</td>
-                                <td>바닐라라떼</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/하삼동음료/돌체라떼.png" alt=""></td>
-                                <td><img src="img/하삼동음료/카페모카.png" alt=""></td>
-                                <td><img src="img/하삼동음료/카라멜마끼아또.png" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>돌체라떼</td>
-                                <td>카페라떼</td>
-                                <td>카라멜 마끼아또</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/하삼동음료/카푸치노.png" alt=""></td>
-                                <td><img src="img/하삼동음료/히말라야(소금라떼).png" alt=""></td>
-                                <td><img src="img/하삼동음료/흑당카페라떼.png" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>카푸치노</td>
-                                <td>히말라야(소금라떼)</td>
-                                <td>흑당카페라떼</td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="menu-section">
-                        <h2 id="hasamdong-food">하삼동커피 푸드</h2>
-                                                <table>
-                            <tr>
-                                <td><img src="img/하삼동푸드/뉴욕치즈케이크.png" alt=""></td>
-                                <td><img src="img/하삼동푸드/초코레이어케이크.png" alt=""></td>
-                                <td><img src="img/하삼동푸드/콘치즈계란빵.png" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>뉴욕 치즈케이크</td>
-                                <td>초코 레이어 케이크</td>
-                                <td>콘치즈 계란빵</td>
-                            </tr>
-                            <tr>
-                                <td><img src="img/하삼동푸드/다크초코쿠키.png" alt=""></td>
-                                <td><img src="img/하삼동푸드/캐슈넛쿠키.png" alt=""></td>
-                                <td><img src="img/하삼동푸드/마카다미아초코쿠키.png" alt=""></td>
-                            </tr>
-                            <tr>
-                                <td>다크 초코 쿠키</td>
-                                <td>케슈넛 쿠키</td>
-                                <td>마카다미아 초코 쿠키</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
+        <main>
+            <div class="about-container">
+                <h1>"오늘 뭐 마시지?"</h1>
+                <p>
+                    매일 똑같은 커피, 지겹지 않으신가요? <br>
+                    '오늘 뭐 마시지?'는 여러분의 평범한 일상에 특별한 커피 한 잔을 더해드리기 위해 만들어졌습니다.
+                </p>
+                <p>
+                    저희 사이트에서는 국내 주요 프랜차이즈 카페들의 다양한 메뉴를 한눈에 비교하고, <br>
+                    숨겨진 보석 같은 음료들을 발견할 수 있습니다. 
+                    이제 메뉴판 앞에서 고민하는 시간은 줄이고, 새로운 맛을 즐기는 시간을 늘려보세요!
+                </p>
+                <hr>
+                <h2>주요 기능</h2>
+                <ul>
+                    <li><strong>통합 메뉴 정보:</strong> 스타벅스, 메가커피 등 여러 카페의 메뉴를 한 곳에서 확인하세요.</li>
+                    <li><strong>간편 검색:</strong> 원하는 메뉴를 검색창에 입력하여 빠르게 찾아보세요.</li>
+                    <li><strong>매장 위치 안내:</strong> 현재 위치에서 가장 가까운 카페 매장을 찾아보세요. (업데이트 예정)</li>
+                </ul>
             </div>
-        </div>
+        </main>
     </div>
-    <footer>
+
+    <footer id="footer">
         <div class="footer-content">
-            <p>&copy; 2025 KH-Project.</p>
-            <p>Created by Shin-DongHo.</p>
+            <p>&copy; 2024 KH-Final-Project. All Rights Reserved.</p>
+            <p>Created by iceh0tch0c0</p>
         </div>
     </footer>
-    <a href="#" class="top-btn">▲</a>
-    <script>
-        // 네비게이션의 모든 카페 링크를 선택
-        document.querySelectorAll('#nav .cafe > a').forEach(anchor => {
-            // 각 링크에 클릭 이벤트 리스너를 추가
-            anchor.addEventListener('click', function (e) {
-                // 링크를 클릭하면 'data-slide' 속성 값 (예: "slide1")
-                const slideId = this.getAttribute('data-slide');
-                
-                // 가져온 값과 동일한 ID를 가진 라디오 버튼을 찾아 체크 상태 전환
-                document.getElementById(slideId).checked = true;
-            });
-        });
-        // 네비게이션의 모든 하위 메뉴 링크(음료, 푸드)를 선택
-        document.querySelectorAll('#nav .cafe ul a').forEach(submenuAnchor => {
-            // 각 하위 메뉴 링크에 클릭 이벤트 리스너를 추가
-            submenuAnchor.addEventListener('click', function(e) {
-                // 클릭된 하위 메뉴의 부모(.cafe)에 있는 상위 메뉴 링크 찾아 상수로 설정
-                const parentAnchor = this.closest('.cafe').querySelector('a');
-                
-                // 상위 메뉴 링크에서 'data-slide' 속성 값 상수로 설정
-                const slideId = parentAnchor.getAttribute('data-slide');
-                
-                // 해당하는 슬라이드를 보여주기 위해 라디오 버튼을 체크 상태 전환
-                document.getElementById(slideId).checked = true;
-            });
-        });
-    </script>
 </body>
 </html>
+
