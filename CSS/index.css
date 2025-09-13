@@ -39,7 +39,7 @@ a{
 #nav{
     border: 1px solid black;
     width: 100%;
-    padding: 20px;
+    padding: 30px;
 }
 
 #nav > ul{
@@ -64,15 +64,15 @@ a{
 
 /* 하위 메뉴 스타일 */
 #nav > ul > li > ul {
-    display: none; /* 평소엔 숨김 */
+    display: none; 
     position: absolute;
-    top: 27px; /* 메인 메뉴 바로 아래에 위치 */
+    top: 27px; 
     left: 0;
     width: 100%;
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 10px 0;
     z-index: 10;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
@@ -141,8 +141,8 @@ a{
 }
 
 .slide table img {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
     border: 1px solid #eee;
