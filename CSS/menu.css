@@ -1,6 +1,6 @@
 /* CSS 파일 최상단에 변수 선언 */
 :root {
-    --bg-color: #F8F4E8;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/cork-wallet.png');
     --text-color: #4E4039;
     --accent-color: #C17A4F;
     --header-bg-color: #FFFFFF; 

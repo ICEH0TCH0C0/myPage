@@ -2,7 +2,7 @@
     --bg-color: #F8F4E8;
     --text-color: #4E4039;
     --accent-color: #C17A4F;
-    --header-bg-color: #FFFFFF; 
+    --header-bg-color: #FFFFFF;
     --border-color: #E0DACE;
 }
 
@@ -23,6 +23,7 @@ body {
     width: 100%;
     height: 100%;
     margin: 0 auto;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/cork-wallet.png');
 }
 
 ol, ul, li{
@@ -39,6 +40,7 @@ a{
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
+    border-radius: 10px 10px 0 0;
 }
 
 .btn{
@@ -54,14 +56,14 @@ a{
 }
 
 .btn:hover {
-    background-color: #a76842; 
+    background-color: #a76842;
 }
 
 .nav{
     margin-top: 12px;
-    border: 1px 1px 0 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     width: 100%;
-    padding: 30px;
+    padding: 20px 30px;
     background-color: var(--header-bg-color);
 }
 
@@ -69,21 +71,42 @@ a{
     display: flex;
     width: 100%;
     text-align: center;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 40px;
 }
 
 .nav > ul > li a{
-    flex: 1;
     position: relative;
     cursor: pointer;
     color: black;
     font-size: 18px;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav > ul > li a:hover {
+    color: var(--accent-color);
+}
+
+.nav > ul > li a i {
+    margin-right: 8px;
 }
 
 main {
     padding: 20px;
-    background-color: var(--header-bg-color);
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.welcome-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-container h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    animation: fadeInDown 1s;
 }
 
 .slide {
@@ -120,12 +143,12 @@ main {
 
 footer {
     width: 100%;
-    background-color: var(--footer-bg-color);
+    background-color: var(--header-bg-color);
     color: var(--text-color);
     padding: 20px 0;
     text-align: center;
     font-size: 14px;
-    margin-top: auto;
+    border-radius: 0 0 10px 10px;
 }
 
 .footer-content {
