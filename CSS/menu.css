@@ -2,8 +2,8 @@
 :root {
     background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/cork-wallet.png');
     --text-color: #4E4039;
-    --accent-color: #C17A4F;
-    --header-bg-color: #FFFFFF; 
+    --accent-color: #A98870; /* 수정된 부분 */
+    --header-bg-color: #FFFFFF;
     --border-color: #E0DACE;
 }
 
@@ -56,7 +56,7 @@ a{
 
 #location input[type="button"]{
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: var(--header-bg-color); /* 수정된 부분 */
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
@@ -67,7 +67,7 @@ a{
 }
 
 #location input[type="button"]:hover{
-    background-color: #a76842; 
+    background-color: #8D6E5A; /* 수정된 부분 */
 }
 
 .search{
@@ -77,7 +77,7 @@ a{
 
 .search input[type="button"] {
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: var(--header-bg-color); /* 수정된 부분 */
     border: none;
     padding: 7px 8px;
     border-radius: 0 5px 5px 0;
@@ -88,7 +88,7 @@ a{
 }
 
 .search input[type="button"]:hover {
-    background-color: #a76842; 
+    background-color: #8D6E5A; /* 수정된 부분 */
 }
 
 /* 검색 입력창 스타일 */
@@ -243,7 +243,7 @@ a{
     bottom: 20px;
     right: 20px;
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: var(--header-bg-color); /* 수정된 부분 */
     width: 50px;
     height: 50px;
     border-radius: 50%;

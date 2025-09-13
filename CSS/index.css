@@ -1,7 +1,7 @@
 :root {
     --bg-color: #F8F4E8;
     --text-color: #4E4039;
-    --accent-color: #C17A4F;
+    --accent-color: #A98870; /* 수정된 부분 */
     --header-bg-color: #FFFFFF;
     --border-color: #E0DACE;
 }
@@ -45,9 +45,9 @@ a{
 
 .btn{
     background-color: var(--accent-color);
-    color: var(--text-color);
+    color: var(--header-bg-color); /* 수정된 부분 */
     border: none;
-    padding: 7px 8px;
+    padding: 7px 15px; /* 수정된 부분 */
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
@@ -56,7 +56,7 @@ a{
 }
 
 .btn:hover {
-    background-color: #a76842;
+    background-color: #8D6E5A; /* 수정된 부분 */
 }
 
 .nav{
