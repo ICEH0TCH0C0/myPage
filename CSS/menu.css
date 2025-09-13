@@ -54,7 +54,6 @@ a{
     gap: 20px;
 }
 
-#login input[type="button"], 
 #location input[type="button"]{
     background-color: var(--accent-color);
     color: var(--text-color);
@@ -67,7 +66,6 @@ a{
     transition: background-color 0.3s ease;
 }
 
-#login input[type="button"]:hover, 
 #location input[type="button"]:hover{
     background-color: #a76842; 
 }

@@ -126,3 +126,18 @@ body {
     background-color: #a76842;
     border-color: var(--accent-color);
 }
+
+footer {
+    width: 100%;
+    background-color: var(--footer-bg-color);
+    color: var(--text-color);
+    padding:10px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
