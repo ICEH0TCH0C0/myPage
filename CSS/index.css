@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
+}
+
+
 body{
     max-width: 1000px;
     width: 100%;
@@ -64,9 +69,9 @@ a{
 
 /* 하위 메뉴 스타일 */
 #nav > ul > li > ul {
-    display: none; 
+    display: none;
     position: absolute;
-    top: 27px; 
+    top: 27px;
     left: 0;
     width: 100%;
     background-color: white;
@@ -100,15 +105,19 @@ a{
 .slider-container {
     width: 100%;
     margin: 30px auto 0;
-    overflow: hidden; 
+    overflow: hidden;
     position: relative;
     border: 1px solid #ddd;
     border-radius: 10px;
 }
 
+.slider-container input[type="radio"] {
+    display: none; /* 라디오 버튼 숨기기 */
+}
+
 .slides {
     display: flex;
-    width: 500%; 
+    width: 500%;
     transition: transform 0.5s ease-in-out;
 }
 
@@ -116,6 +125,41 @@ a{
     width: 20%;
     padding: 20px 30px;
 }
+
+/* 라디오 버튼 체크에 따른 슬라이드 이동 */
+#slide1:checked ~ .slides { transform: translateX(0); }
+#slide2:checked ~ .slides { transform: translateX(-20%); }
+#slide3:checked ~ .slides { transform: translateX(-40%); }
+#slide4:checked ~ .slides { transform: translateX(-60%); }
+#slide5:checked ~ .slides { transform: translateX(-80%); }
+
+
+.controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.controls label {
+    width: 12px;
+    height: 12px;
+    background-color: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#slide1:checked ~ .controls label[for="slide1"],
+#slide2:checked ~ .controls label[for="slide2"],
+#slide3:checked ~ .controls label[for="slide3"],
+#slide4:checked ~ .controls label[for="slide4"],
+#slide5:checked ~ .controls label[for="slide5"] {
+    background-color: #555;
+}
+
 
 .menu-section {
     margin-bottom: 40px;
@@ -128,6 +172,8 @@ a{
 .menu-section h2{
     text-align: center;
     margin-bottom: 20px;
+    padding-top: 60px; /* 헤더에 가려지지 않도록 패딩 추가 */
+    margin-top: -60px; /* 패딩으로 인한 레이아웃 밀림 방지 */
 }
 
 .slide table {
@@ -147,4 +193,3 @@ a{
     border-radius: 8px;
     border: 1px solid #eee;
 }
-
