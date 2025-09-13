@@ -1,62 +1,17 @@
-/* CSS 파일 최상단에 변수 선언 */
-:root {
-    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/cork-wallet.png');
-    --text-color: #4E4039;
-    --accent-color: #A98870; /* 수정된 부분 */
-    --header-bg-color: #FFFFFF;
-    --border-color: #E0DACE;
+#header {
+    border-radius: 0;
 }
 
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
-}
-
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    max-width: 1000px;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-}
-
-ol, ul, li{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-}
-
-#wrapper{
-    width: 100%;
-    height: 100%;
-}
-
-#header{
-    background: var(--header-bg-color);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 30px;
-}
-
-.header-right{
+.header-right {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-#location input[type="button"]{
+#location input[type="button"],
+.search input[type="button"] {
     background-color: var(--accent-color);
-    color: var(--header-bg-color); /* 수정된 부분 */
+    color: var(--header-bg-color);
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
@@ -66,85 +21,69 @@ a{
     transition: background-color 0.3s ease;
 }
 
-#location input[type="button"]:hover{
-    background-color: #8D6E5A; /* 수정된 부분 */
-}
-
-.search{
-    display: flex;
-    align-items: center;
-}
-
-.search input[type="button"] {
-    background-color: var(--accent-color);
-    color: var(--header-bg-color); /* 수정된 부분 */
-    border: none;
-    padding: 7px 8px;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-weight: bold;
-    font-size: 14px;
-    transition: background-color 0.3s ease;
-}
-
+#location input[type="button"]:hover,
 .search input[type="button"]:hover {
-    background-color: #8D6E5A; /* 수정된 부분 */
+    background-color: #8D6E5A;
 }
 
-/* 검색 입력창 스타일 */
+.search {
+    display: flex;
+}
+
 .search input[type="text"] {
     border: 1px solid var(--border-color);
     border-right: none;
     border-radius: 5px 0 0 5px;
     padding: 8px 10px;
     font-size: 14px;
-    color: var(--text-color);
-    transition: border-color 0.3s ease;
-    vertical-align: middle; /* 버튼과 높이 맞춤 */
 }
 
-.search input[type="text"]:focus {
-    outline: none;
-    border-color: var(--accent-color);
+.search input[type="button"] {
+    border-radius: 0 5px 5px 0;
+    padding: 8px;
 }
 
-.search input[type="text"]::placeholder {
-    color: #b0a89a;
-}
-
-#nav{
+#nav {
     margin-top: 12px;
-    border: 1px 1px 0 1px solid var(--border-color);
-    width: 100%;
-    padding: 30px;
+    border: 1px solid var(--border-color);
+    padding: 20px;
     background-color: var(--header-bg-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
-
-#nav > ul{
+#nav > ul {
     display: flex;
-    width: 100%;
-    text-align: center;
     justify-content: space-around;
 }
 
-#nav > ul > li{
+#nav > ul > li {
     flex: 1;
     position: relative;
-    cursor: pointer;
+    text-align: center;
 }
 
-.cafe a{
-    color: black;
+.cafe > a {
     font-weight: bold;
     font-size: 18px;
     transition: color 0.3s;
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
 }
 
-/* 하위 메뉴 스타일 */
-#nav > ul > li > ul {
+.cafe > a:hover {
+    background-color: #f5f5f5;
+    color: var(--accent-color);
+}
+
+#nav ul ul {
     display: none;
     position: absolute;
-    top: 27px;
+    top: 50px;
     left: 0;
     width: 100%;
     background-color: white;
@@ -156,35 +95,30 @@ a{
 }
 
 #nav > ul > li:hover > ul {
-    display: block; /* 메인 메뉴에 마우스를 올리면 보이게 함 */
+    display: block;
 }
 
-#nav > ul > li > ul > li {
-    padding: 8px 0;
-}
-
-#nav > ul > li > ul > li > a {
+#nav ul ul li a {
     font-size: 16px;
-    font-weight: normal;
-    color: #555;
+    padding: 8px 0;
+    display: block;
 }
 
-#nav > ul > li > ul > li > a:hover {
-    color: #00704A;
+#nav ul ul li a:hover {
+    color: var(--accent-color);
 }
 
-
-/*슬라이드 & 테이블 스타일*/
 .slider-container {
+    margin-top: 12px;
     width: 100%;
     overflow: hidden;
-    position: relative;
-    border: none 1px 1px 1px solid var(--border-color);
     background-color: var(--header-bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
 }
 
 .slider-container input[type="radio"] {
-    display: none; /* 라디오 버튼 숨기기 */
+    display: none;
 }
 
 .slides {
@@ -192,32 +126,27 @@ a{
 }
 
 .slide {
-    display: none; /* 모든 슬라이드를 일단 숨김 */
-    width: 100%;
+    display: none;
     padding: 20px 30px;
 }
 
-/* 라디오 버튼 체크에 따라 해당하는 슬라이드만 표시 */
-#slide1:checked ~ .slides #starbucks-slide { display: block; }
-#slide2:checked ~ .slides #mega-slide { display: block; }
-#slide3:checked ~ .slides #ediya-slide { display: block; }
-#slide4:checked ~ .slides #compose-slide { display: block; }
-#slide5:checked ~ .slides #hasamdong-slide { display: block; }
-
+#slide1:checked ~ .slides #starbucks-slide,
+#slide2:checked ~ .slides #mega-slide,
+#slide3:checked ~ .slides #ediya-slide,
+#slide4:checked ~ .slides #compose-slide,
+#slide5:checked ~ .slides #hasamdong-slide {
+    display: block;
+}
 
 .menu-section {
     margin-bottom: 40px;
 }
 
-.menu-section:last-child {
-    margin-bottom: 0;
-}
-
-.menu-section h2{
+.menu-section h2 {
     text-align: center;
     margin-bottom: 20px;
-    padding-top: 60px; /* 헤더에 가려지지 않도록 패딩 추가 */
-    margin-top: -60px; /* 패딩으로 인한 레이아웃 밀림 방지 */
+    padding-top: 60px;
+    margin-top: -60px;
 }
 
 .slide table {
@@ -228,6 +157,7 @@ a{
 
 .slide table td {
     padding-bottom: 20px;
+    width: 33.33%;
 }
 
 .slide table img {
@@ -243,14 +173,13 @@ a{
     bottom: 20px;
     right: 20px;
     background-color: var(--accent-color);
-    color: var(--header-bg-color); /* 수정된 부분 */
+    color: var(--header-bg-color);
     width: 50px;
     height: 50px;
     border-radius: 50%;
     text-align: center;
-    line-height: 50px; /* 텍스트 세로 중앙 정렬 */
+    line-height: 50px;
     font-size: 20px;
-    text-decoration: none;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     z-index: 1000;
     transition: background-color 0.3s;
@@ -258,19 +187,4 @@ a{
 
 .top-btn:hover {
     opacity: 0.8;
-}
-
-footer {
-    width: 100%;
-    background-color: var(--footer-bg-color);
-    color: var(--text-color);
-    padding: 20px 0;
-    text-align: center;
-    font-size: 14px;
-    margin-top: auto;
-}
-
-.footer-content {
-    max-width: 1000px;
-    margin: 0 auto;
 }

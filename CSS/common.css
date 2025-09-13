@@ -1,0 +1,64 @@
+/* --- 변수 선언 --- */
+:root {
+    --bg-color: #F8F4E8;
+    --text-color: #4E4039;
+    --accent-color: #A98870;
+    --header-bg-color: #FFFFFF;
+    --border-color: #E0DACE;
+}
+
+/* --- 기본 스타일 초기화 --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/cork-wallet.png');
+    font-family: 'Malgun Gothic', sans-serif;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* --- 헤더 --- */
+#header {
+    background: var(--header-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border-radius: 10px 10px 0 0;
+}
+
+/* --- 푸터 --- */
+footer {
+    width: 100%;
+    background-color: var(--header-bg-color);
+    color: var(--text-color);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 0 0 10px 10px;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}

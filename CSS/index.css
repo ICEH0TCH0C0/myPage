@@ -1,53 +1,8 @@
-:root {
-    --bg-color: #F8F4E8;
-    --text-color: #4E4039;
-    --accent-color: #A98870; /* 수정된 부분 */
-    --header-bg-color: #FFFFFF;
-    --border-color: #E0DACE;
-}
-
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
-}
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    max-width: 1000px;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/cork-wallet.png');
-}
-
-ol, ul, li{
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-}
-
-#header{
-    background: var(--header-bg-color);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 30px;
-    border-radius: 10px 10px 0 0;
-}
-
-.btn{
+.btn {
     background-color: var(--accent-color);
-    color: var(--header-bg-color); /* 수정된 부분 */
+    color: var(--header-bg-color);
     border: none;
-    padding: 7px 15px; /* 수정된 부분 */
+    padding: 7px 15px;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
@@ -56,10 +11,10 @@ a{
 }
 
 .btn:hover {
-    background-color: #8D6E5A; /* 수정된 부분 */
+    background-color: #8D6E5A;
 }
 
-.nav{
+.nav {
     margin-top: 12px;
     border-bottom: 1px solid var(--border-color);
     width: 100%;
@@ -67,7 +22,7 @@ a{
     background-color: var(--header-bg-color);
 }
 
-.nav > ul{
+.nav > ul {
     display: flex;
     width: 100%;
     text-align: center;
@@ -75,10 +30,10 @@ a{
     gap: 40px;
 }
 
-.nav > ul > li a{
+.nav > ul > li a {
     position: relative;
     cursor: pointer;
-    color: black;
+    color: var(--text-color);
     font-size: 18px;
     font-weight: bold;
     transition: color 0.3s ease;
@@ -106,52 +61,4 @@ main {
 .about-container h1 {
     font-size: 3em;
     margin-bottom: 20px;
-    animation: fadeInDown 1s;
-}
-
-.slide {
-    padding: 20px;
-}
-
-.slide h2{
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    font-size: 24px;
-}
-
-.slide table {
-    width: 100%;
-    border-collapse: collapse;
-    text-align: center;
-}
-
-.slide table td {
-    width: 33.33%;
-    padding-bottom: 20px;
-    font-size: 16px;
-}
-
-.slide table img {
-    width: 220px;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 1px solid #eee;
-    margin-bottom: 10px;
-}
-
-footer {
-    width: 100%;
-    background-color: var(--header-bg-color);
-    color: var(--text-color);
-    padding: 20px 0;
-    text-align: center;
-    font-size: 14px;
-    border-radius: 0 0 10px 10px;
-}
-
-.footer-content {
-    max-width: 1000px;
-    margin: 0 auto;
 }
