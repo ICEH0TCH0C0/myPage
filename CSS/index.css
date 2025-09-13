@@ -1,3 +1,12 @@
+/* CSS 파일 최상단에 변수 선언 */
+:root {
+    --bg-color: #F8F4E8;
+    --text-color: #4E4039;
+    --accent-color: #C17A4F;
+    --header-bg-color: #FFFFFF; 
+    --border-color: #E0DACE;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -9,9 +18,9 @@ html {
 }
 
 
-body{
-    background-color: #f8f4e8;
-    color: #4e4039;
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
     max-width: 1000px;
     width: 100%;
     height: 100%;
@@ -32,7 +41,7 @@ a{
 }
 
 #header{
-    background: white;
+    background: var(--header-bg-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -45,12 +54,70 @@ a{
     gap: 20px;
 }
 
+#login input[type="button"]{
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+#login input[type="button"]:hover{
+    background-color: #a76842; 
+}
+
+.search{
+    display: flex;
+    align-items: center;
+}
+
+.search input[type="button"] {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    padding: 7px 8px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.search input[type="button"]:hover {
+    background-color: #a76842; 
+}
+
+/* 검색 입력창 스타일 */
+.search input[type="text"] {
+    border: 1px solid var(--border-color);
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+    padding: 8px 10px;
+    font-size: 14px;
+    color: var(--text-color);
+    transition: border-color 0.3s ease;
+    vertical-align: middle; /* 버튼과 높이 맞춤 */
+}
+
+.search input[type="text"]:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.search input[type="text"]::placeholder {
+    color: #b0a89a;
+}
+
 #nav{
     margin-top: 12px;
-    border: 1px 1px none 1px solid #e0dace;
+    border: 1px 1px 0 1px solid var(--border-color);
     width: 100%;
     padding: 30px;
-    background-color: #ffffff;
+    background-color: var(--header-bg-color);
 }
 
 #nav > ul{
@@ -81,7 +148,7 @@ a{
     left: 0;
     width: 100%;
     background-color: white;
-    border: 1px solid #ddd;
+    border: 1px solid #e0dace;
     border-radius: 6px;
     padding: 10px 0;
     z-index: 10;
@@ -113,8 +180,8 @@ a{
     margin: auto 0;
     overflow: hidden;
     position: relative;
-    border: none 1px 1px 1px solid #ddd;
-    background-color: #ffffff;
+    border: none 1px 1px 1px solid var(--border-color);
+    background-color: var(--header-bg-color);
 }
 
 .slider-container input[type="radio"] {
@@ -138,34 +205,6 @@ a{
 #slide3:checked ~ .slides { transform: translateX(-40%); }
 #slide4:checked ~ .slides { transform: translateX(-60%); }
 #slide5:checked ~ .slides { transform: translateX(-80%); }
-
-
-.controls {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-}
-
-.controls label {
-    width: 12px;
-    height: 12px;
-    background-color: #ccc;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#slide1:checked ~ .controls label[for="slide1"],
-#slide2:checked ~ .controls label[for="slide2"],
-#slide3:checked ~ .controls label[for="slide3"],
-#slide4:checked ~ .controls label[for="slide4"],
-#slide5:checked ~ .controls label[for="slide5"] {
-    background-color: #555;
-}
-
 
 .menu-section {
     margin-bottom: 40px;
@@ -204,8 +243,8 @@ a{
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #c17a4f;
-    color: white;
+    background-color: var(--accent-color);
+    color: var(--text-color);
     width: 50px;
     height: 50px;
     border-radius: 50%;
