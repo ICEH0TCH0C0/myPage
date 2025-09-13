@@ -1,0 +1,128 @@
+/* index.css에서 가져온 색상 변수 */
+:root {
+    --bg-color: #F8F4E8;
+    --text-color: #4E4039;
+    --accent-color: #C17A4F;
+    --header-bg-color: #FFFFFF; 
+    --border-color: #E0DACE;
+}
+
+/* 기본 스타일 초기화 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Malgun Gothic', sans-serif;
+    
+    /* flex를 사용하여 화면 정중앙에 배치 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    width: 400px;
+    padding: 40px;
+    background-color: var(--header-bg-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    /* 내부 요소들을 flex column으로 정렬 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-header {
+    margin-bottom: 30px;
+}
+
+.login-header img {
+    width: 100px; /* 로고 크기 조절 */
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* 입력창과 버튼 사이 간격 */
+}
+
+.login-form input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.login-form input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+.login-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--accent-color);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #a76842;
+}
+
+.links {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.links a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+.links span {
+    color: var(--border-color);
+}
+
+/* 뒤로가기 버튼을 위한 컨테이너 */
+.back-button-container {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.back-button {
+    color: var(--header-bg-color);
+    background-color: var(--accent-color);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    transition: all 0.2s ease-in-out;
+}
+
+.back-button:hover {
+    background-color: #a76842;
+    border-color: var(--accent-color);
+}

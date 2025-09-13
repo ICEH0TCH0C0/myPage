@@ -11,8 +11,11 @@
         <div id="header" >
             <img src="img/logo.PNG" alt="KH로고">
             <div class="header-right">
+                <div id="location">
+                    <a href="./html/about.html"><input type="button" value="매장 위치"></a>
+                </div>
                 <div id="login">
-                    <a href="login.html"><input type="button" value="로그인"></a>
+                    <a href="./html/login.html"><input type="button" value="로그인"></a>
                 </div>
                 <div class="search">
                     <input type="text" placeholder="검색어를 입력하세요.">
@@ -24,35 +27,35 @@
         <div id="nav">
             <ul>
                 <li class="cafe">
-                    <a href="#starbucks-slide">스타벅스</a>
+                    <a href="#starbucks-slide" data-slide="slide1">스타벅스</a>
                     <ul>
                         <li><a href="#sb-drink">음료</a></li>
                         <li><a href="#sb-food">푸드</a></li>
                     </ul>
                 </li>
                 <li class="cafe">
-                    <a href="#mega-slide">메가커피</a>
+                    <a href="#mega-slide" data-slide="slide2">메가커피</a>
                     <ul>
                         <li><a href="#mega-drink">음료</a></li>
                         <li><a href="#mega-food">푸드</a></li>
                     </ul>
                 </li>
                 <li class="cafe">
-                    <a href="#ediya-slide">이디야</a>
+                    <a href="#ediya-slide" data-slide="slide3">이디야</a>
                     <ul>
                         <li><a href="#ediya-drink">음료</a></li>
                         <li><a href="#ediya-food">푸드</a></li>
                     </ul>
                 </li>
                 <li class="cafe">
-                    <a href="#compose-slide">컴포즈</a>
+                    <a href="#compose-slide" data-slide="slide4">컴포즈</a>
                     <ul>
                         <li><a href="#compose-drink">음료</a></li>
                         <li><a href="#compose-food">푸드</a></li>
                     </ul>
                 </li>
                 <li class="cafe">
-                    <a href="#hasamdong-slide">하삼동커피</a>
+                    <a href="#hasamdong-slide" data-slide="slide5">하삼동커피</a>
                     <ul>
                         <li><a href="#hasamdong-drink">음료</a></li>
                         <li><a href="#hasamdong-food">푸드</a></li>
@@ -383,15 +386,35 @@
                     </div>
                 </div>
             </div>
-            <div class="controls">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-                <label for="slide4"></label>
-                <label for="slide5"></label>
-            </div>
         </div>
     </div>
     <a href="#" class="top-btn">▲</a>
+    <script>
+        // 네비게이션의 모든 카페 링크를 선택
+        document.querySelectorAll('#nav .cafe > a').forEach(anchor => {
+            // 각 링크에 클릭 이벤트 리스너를 추가
+            anchor.addEventListener('click', function (e) {
+                // 링크를 클릭하면 'data-slide' 속성 값 (예: "slide1")
+                const slideId = this.getAttribute('data-slide');
+                
+                // 가져온 값과 동일한 ID를 가진 라디오 버튼을 찾아 체크 상태 전환
+                document.getElementById(slideId).checked = true;
+            });
+        });
+        // 네비게이션의 모든 하위 메뉴 링크(음료, 푸드)를 선택
+        document.querySelectorAll('#nav .cafe ul a').forEach(submenuAnchor => {
+            // 각 하위 메뉴 링크에 클릭 이벤트 리스너를 추가
+            submenuAnchor.addEventListener('click', function(e) {
+                // 클릭된 하위 메뉴의 부모(.cafe)에 있는 상위 메뉴 링크 찾아 상수로 설정
+                const parentAnchor = this.closest('.cafe').querySelector('a');
+                
+                // 상위 메뉴 링크에서 'data-slide' 속성 값 상수로 설정
+                const slideId = parentAnchor.getAttribute('data-slide');
+                
+                // 해당하는 슬라이드를 보여주기 위해 라디오 버튼을 체크 상태 전환
+                document.getElementById(slideId).checked = true;
+            });
+        });
+    </script>
 </body>
 </html>
