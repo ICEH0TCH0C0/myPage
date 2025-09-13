@@ -5,18 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>카페메뉴추천!</title>
-
-    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
     <div id="wrapper">
         <div id="header" >
-            <img src="../img/logo.PNG" alt="KH로고">
-
+            <img src="img/logo.PNG" alt="KH로고">
             <div id="login">
                 <a href="login.html"><input type="button" value="로그인"></a>
             </div>
-
             <div class="search">
                 <input type="text" placeholder="검색어를 입력하세요.">
                 <input type="button" value="검색">
@@ -25,90 +22,114 @@
 
         <div id="nav">
             <ul>
-                <li id="starbucks" class="cafe"><a href="">스타벅스</a>
+                <!-- ★★★ 하위 메뉴 추가 ★★★ -->
+                <li class="cafe">
+                    <a href="#">스타벅스</a>
                     <ul>
-                        <li><a href="">음료</a></li>
-                        <li><a href="">푸드</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">푸드</a></li>
                     </ul>
                 </li>
-                <li id="megacoffee" class="cafe"><a href="">메가커피</a>
+                <li class="cafe">
+                    <a href="#">메가커피</a>
                     <ul>
-                        <li><a href="">음료</a></li>
-                        <li><a href="">푸드</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">푸드</a></li>
                     </ul>
                 </li>
-                <li id="ediya" class="cafe"><a href="">이디야</a>
+                <li class="cafe">
+                    <a href="#">이디야</a>
                     <ul>
-                        <li><a href="">음료</a></li>
-                        <li><a href="">푸드</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">푸드</a></li>
                     </ul>
                 </li>
-                <li id="compse" class="cafe"><a href="">컴포즈</a>
+                <li class="cafe">
+                    <a href="#">컴포즈</a>
                     <ul>
-                        <li><a href="">음료</a></li>
-                        <li><a href="">푸드</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">푸드</a></li>
                     </ul>
                 </li>
-                <li id="hasamdong" class="cafe"><a href="">하삼동커피</a>
+                <li class="cafe">
+                    <a href="#">하삼동커피</a>
                     <ul>
-                        <li><a href="">음료</a></li>
-                        <li><a href="">푸드</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">푸드</a></li>
                     </ul>
                 </li>
             </ul>
         </div>
 
-        <div id="coffee-slider">
-            <input type="radio" name="coffee-slide" id="c1" checked>
-            <input type="radio" name="coffee-slide" id="c2">
-            <input type="radio" name="coffee-slide" id="c3">
-            <input type="radio" name="coffee-slide" id="c4">
-            <input type="radio" name="coffee-slide" id="c5">
-        </div>
-
-        <div class="slides">
-            <div class="slide">
-                <h2>스타벅스 메뉴</h2>
-                <div class="menu">
-                    <input type="radio" name="menu" id="sb-drink" checked>
-                    <label for="sb-drink">음료</label>
-                    <input type="radio" name="menu" id="sb-food">
-                    <label for="sb-food">푸드</label>
+        <div class="slider-container">
+            <div class="slides">
+                <!-- 슬라이드 1: 스타벅스 -->
+                <div class="slide">
+                    <div class="menu-section">
+                        <h2>스타벅스 음료 메뉴</h2>
+                        <table>
+                            <tr>
+                                <td><img src="img/sb_aa.jpg" alt="아이스 아메리카노"></td>
+                                <td><img src="img/sb_lathe.jpg" alt="아이스 카페 라떼"></td>
+                                <td><img src="img/sb_makiato.jpg" alt="아이스 카라멜 마끼아또"></td>
+                            </tr>
+                            <tr>
+                                <td>아이스 아메리카노</td>
+                                <td>아이스 카페 라떼</td>
+                                <td>아이스 카라멜 마끼아또</td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/sb_moka.jpg" alt=""></td>
+                                <td><img src="img/sb_capuchino.jpg" alt=""></td>
+                                <td><img src="img/sb_dolche.jpg" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td id="sb-aa">아이스 카페 모카</td>
+                                <td id="sb-aa">아이스 카푸치노</td>
+                                <td id="sb-aa">아이스 스타벅스 돌체 라떼</td>
+                            </tr>
+                            <tr>
+                                <td><img src="img/sb_mkcmlathe.jpg" alt=""></td>
+                                <td><img src="img/sb_vanilabeen.jpg" alt=""></td>
+                                <td><img src="img/sb_lavendercafe.png" alt=""></td>
+                            </tr>
+                            <tr>
+                                <td id="sb-aa">아이스 밀크카라멜 라떼</td>
+                                <td id="sb-aa">아이스 바닐라 빈 라떼</td>
+                                <td id="sb-aa">아이스 라벤더 카페 브레베</td>
+                            </tr>   
+                        </table>
+                    </div>
+                    <div class="menu-section">
+                        <h2>스타벅스 푸드 메뉴</h2>
+                        <p style="text-align: center; padding: 50px;">(스타벅스 푸드 메뉴가 들어갈 자리)</p>
+                    </div>
                 </div>
-                <table>
-                    <tr>
-                        <td><img src="../img/sb_aa.jpg" alt=""></td>
-                        <td><img src="../img/sb_lathe.jpg" alt=""></td>
-                        <td><img src="../img/sb_makiato.jpg" alt=""></td>
-                    </tr>
-                    <tr>
-                        <td id="sb-aa">아이스 아메리카노</td>
-                        <td id="sb-aa">아이스 카페 라떼</td>
-                        <td id="sb-aa">아이스 카페 마끼아또</td>
-                    </tr>
-                    <tr>
-                        <td><img src="../img/sb_moka.jpg" alt=""></td>
-                        <td><img src="../img/sb_capuchino.jpg" alt=""></td>
-                        <td><img src="../img/sb_dolche.jpg" alt=""></td>
-                    </tr>
-                    <tr>
-                        <td id="sb-aa">아이스 카페 모카</td>
-                        <td id="sb-aa">아이스 카푸치노</td>
-                        <td id="sb-aa">아이스 스타벅스 돌체 라떼</td>
-                    </tr>
-                    <tr>
-                        <td><img src="../img/sb_mkcmlathe.jpg" alt=""></td>
-                        <td><img src="../img/sb_vanilabeen.jpg" alt=""></td>
-                        <td><img src="../img/sb_lavendercafe.png" alt=""></td>
-                    </tr>
-                    <tr>
-                        <td id="sb-aa">아이스 밀크카라멜 라떼</td>
-                        <td id="sb-aa">아이스 바닐라 빈 라떼</td>
-                        <td id="sb-aa">아이스 라벤더 카페 브레베</td>
-                    </tr>
-                </table>
+                <!-- 슬라이드 2: 메가커피 -->
+                <div class="slide">
+                    <h2>메가커피 메뉴</h2>
+                    <p style="text-align: center; padding: 50px;">(메가커피 메뉴가 들어갈 자리)</p>
+                </div>
+                <!-- 슬라이드 3: 이디야 -->
+                <div class="slide">
+                    <h2>이디야 메뉴</h2>
+                    <p style="text-align: center; padding: 50px;">(이디야 메뉴가 들어갈 자리)</p>
+                </div>
+                <!-- 슬라이드 4: 컴포즈 -->
+                <div class="slide">
+                    <h2>컴포즈 메뉴</h2>
+                    <p style="text-align: center; padding: 50px;">(컴포즈 메뉴가 들어갈 자리)</p>
+                </div>
+                <!-- 슬라이드 5: 하삼동커피 -->
+                <div class="slide">
+                    <h2>하삼동커피 메뉴</h2>
+                    <p style="text-align: center; padding: 50px;">(하삼동커피 메뉴가 들어갈 자리)</p>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- 외부 JavaScript 파일 연결 -->
+    <script src="JS/main.js"></script>
 </body>
 </html>

@@ -2,11 +2,9 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-
 }
 
 body{
-    min-width: max-content;
     max-width: 1000px;
     width: 100%;
     height: 100%;
@@ -15,8 +13,6 @@ body{
 
 ol, ul, li{
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 a{
@@ -30,14 +26,20 @@ a{
 
 #header{
     background: whitesmoke;
-    justify-content: center;
     display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 20px;
+}
+
+#header .search {
+    margin-left: auto;
 }
 
 #nav{
     border: 1px solid black;
     width: 100%;
-    padding: 30px;
+    padding: 20px;
 }
 
 #nav > ul{
@@ -50,52 +52,99 @@ a{
 #nav > ul > li{
     flex: 1;
     position: relative;
+    cursor: pointer;
 }
 
 .cafe a{
     color: black;
     font-weight: bold;
     font-size: 18px;
+    transition: color 0.3s;
 }
 
-#nav > ul{
-    display: flex;
+/* 하위 메뉴 스타일 */
+#nav > ul > li > ul {
+    display: none; /* 평소엔 숨김 */
+    position: absolute;
+    top: 27px; /* 메인 메뉴 바로 아래에 위치 */
+    left: 0;
     width: 100%;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 5px 0;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+#nav > ul > li:hover > ul {
+    display: block; /* 메인 메뉴에 마우스를 올리면 보이게 함 */
+}
+
+#nav > ul > li > ul > li {
+    padding: 8px 0;
+}
+
+#nav > ul > li > ul > li > a {
+    font-size: 16px;
+    font-weight: normal;
+    color: #555;
+}
+
+#nav > ul > li > ul > li > a:hover {
+    color: #00704A;
+}
+
+
+/*슬라이드 & 테이블 스타일*/
+.slider-container {
+    width: 100%;
+    margin: 30px auto 0;
+    overflow: hidden; 
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.slides {
+    display: flex;
+    width: 500%; 
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    width: 20%;
+    padding: 20px 30px;
+}
+
+.menu-section {
+    margin-bottom: 40px;
+}
+
+.menu-section:last-child {
+    margin-bottom: 0;
+}
+
+.menu-section h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.slide table {
+    width: 100%;
+    border-collapse: collapse;
     text-align: center;
 }
 
-#nav > ul > li{
-    flex: 1;
-    position: relative;
-}
-/* 영역으로 넓히기 */
-#nav > ul > li ul{
-    display: none;
-    position: absolute;
-    top: 20px; 
-    left: 10px;
-    width: calc(100% - 20px);
-    border: 1px solid black;
-    border-radius: 6px;
-    padding: 10px 0;
-    margin-top: 3px;
-    background: white;
+.slide table td {
+    padding-bottom: 20px;
 }
 
-#nav > ul li > ul li{
-    padding: 10px;
+.slide table img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #eee;
 }
-
-#nav > ul li > ul li > a{
-    color: gray;
-}
-
-#nav > ul li a:hover+ul{
-    display: block;
-}
-
-#nav > ul li ul:hover{
-    display: block;
-}
-
 
