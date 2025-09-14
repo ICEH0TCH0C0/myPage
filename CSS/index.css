@@ -51,6 +51,7 @@ main {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
+    margin-bottom: 12px; /* 푸터와의 간격 추가 */
 }
 
 .welcome-section {

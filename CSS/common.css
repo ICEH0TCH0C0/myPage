@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
 /* --- 변수 선언 --- */
 :root {
     --bg-color: #F8F4E8;
@@ -25,7 +26,7 @@ body {
     width: 100%;
     margin: 0 auto;
     background-image: url('https://www.toptal.com/designers/subtlepatterns/uploads/cork-wallet.png');
-    font-family: 'Malgun Gothic', sans-serif;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
 ol, ul, li {
@@ -50,12 +51,12 @@ a {
 /* --- 푸터 --- */
 footer {
     width: 100%;
-    background-color: var(--header-bg-color);
+    background-color: transparent; 
     color: var(--text-color);
     padding: 20px 0;
     text-align: center;
     font-size: 14px;
-    border-radius: 0 0 10px 10px;
+    border-radius: 0; 
 }
 
 .footer-content {

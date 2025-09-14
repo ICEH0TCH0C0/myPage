@@ -8,24 +8,27 @@
     <link rel="stylesheet" href="../CSS/login.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-header">
-            <a href="../index.html">
-                <img src="../img/logo.PNG" alt="KH로고">
-            </a>
-        </div>
-        <form class="login-form" method="post">
-            <input type="text" placeholder="아이디" required>
-            <input type="password" placeholder="비밀번호" required>
-            <button type="submit">로그인</button>
-        </form>
-        <div class="links">
-            <a href="">회원가입</a>
-            <span>|</span>
-            <a href="">아이디/비밀번호 찾기</a>
-        </div>
-        <div class="back-button-container">
-            <a href="../index.html" class="back-button">뒤로가기</a>
+    <!-- 전체를 감싸는 wrapper 추가 -->
+    <div class="login-page-wrapper">
+        <div class="login-container">
+            <div class="login-header">
+                <a href="../index.html">
+                    <img src="../img/logo.PNG" alt="KH로고">
+                </a>
+            </div>
+            <form class="login-form" method="post">
+                <input type="text" placeholder="아이디" required>
+                <input type="password" placeholder="비밀번호" required>
+                <button type="submit">로그인</button>
+            </form>
+            <div class="links">
+                <a href="">회원가입</a>
+                <span>|</span>
+                <a href="">아이디/비밀번호 찾기</a>
+            </div>
+            <div class="back-button-container">
+                <a href="../index.html" class="back-button">뒤로가기</a>
+            </div>
         </div>
         <footer id="footer">
             <div class="footer-content">
