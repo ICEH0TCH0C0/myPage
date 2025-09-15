@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap');
-/* --- 변수 선언 --- */
+/*변수 선언*/
 :root {
     --bg-color: #F8F4E8;
     --text-color: #4E4039;
@@ -8,7 +8,7 @@
     --border-color: #E0DACE;
 }
 
-/* --- 기본 스타일 초기화 --- */
+/*기본 스타일*/
 * {
     box-sizing: border-box;
     margin: 0;
@@ -38,7 +38,7 @@ a {
     color: inherit;
 }
 
-/* --- 헤더 --- */
+/*헤더*/
 #header {
     background: var(--header-bg-color);
     display: flex;
@@ -48,7 +48,7 @@ a {
     border-radius: 10px 10px 0 0;
 }
 
-/* --- 푸터 --- */
+/*푸터*/
 footer {
     width: 100%;
     background-color: transparent; 
